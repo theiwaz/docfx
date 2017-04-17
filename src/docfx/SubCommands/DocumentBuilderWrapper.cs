@@ -285,6 +285,7 @@ namespace Microsoft.DocAsCode.SubCommands
             {
                 parameters.LruSize = Math.Max(0, config.LruSize.Value);
             }
+            Logger.LogVerbose($"Lru size is: {parameters.LruSize}");
 
             foreach (var pair in fileMappingParametersDictionary)
             {
