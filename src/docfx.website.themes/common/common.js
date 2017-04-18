@@ -83,7 +83,7 @@ var gitUrlPatternItems = {
         }
     },
     'vso': {
-        'testRegex': /^https:\/\/.*\.visualstudio\.com\/.*/i,
+        'testRegex': /^(https|ssh)?(:\/\/)?(\S+\@)?(\S+\.)?visualstudio\.com(\/|:).*/i,
         'generateUrl': function (gitInfo) {
             var url = gitInfo.repo + '?path=' + gitInfo.path + '&version=GB' + gitInfo.branch;
             if (gitInfo.startLine && gitInfo.startLine > 0) {
